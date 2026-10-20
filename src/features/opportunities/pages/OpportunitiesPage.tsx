@@ -115,7 +115,7 @@ export const OpportunitiesPage: React.FC = () => {
   const [typeFilter, setTypeFilter] = useState<OpportunityType | 'all'>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const queryClient = useQueryClient()
-  const { profile } = useAuth()
+  const { profile, isAdmin } = useAuth()
   const navigate = useNavigate()
 
   const { data: opportunities = [], isLoading } = useQuery({

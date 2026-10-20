@@ -15,6 +15,7 @@ dist-ssr
 .env*.local
 server/data/*.db
 server/data/*.db-*
+server/data/*.sqlite*
 
 # Editor directories and files
 .vscode/*
@@ -26,5 +27,3 @@ server/data/*.db-*
 *.njsproj
 *.sln
 *.sw?
-
-server/data/*.sqlite*

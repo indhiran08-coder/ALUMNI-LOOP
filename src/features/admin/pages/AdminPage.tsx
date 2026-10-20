@@ -74,7 +74,7 @@ export const AdminPage: React.FC = () => {
 
   const { data: auditLogs = [] } = useQuery({
     queryKey: ['admin-audit'],
-    queryFn: () => adminService.getAuditLogs({ limit: 50 }),
+    queryFn: () => adminService.getAuditLogs(),
     enabled: isAdmin,
   })
 
@@ -143,7 +143,7 @@ export const AdminPage: React.FC = () => {
 
   const handleResolveReport = async (reportId: string) => {
     setActionLoading(reportId + '-resolve')
-    await performAction(() => adminService.resolveReport(reportId, 'reviewed', 'Reviewed and resolved.'), ['admin-reports'])
+    await performAction(() => adminService.resolveReport(reportId, 'actioned', 'Reviewed and resolved.'), ['admin-reports'])
     setActionLoading(null)
   }
 
@@ -416,8 +416,8 @@ export const AdminPage: React.FC = () => {
                       <p className="text-[11px] text-slate-500">
                         Content: {report.target_type} · {new Date(report.created_at).toLocaleDateString()}
                       </p>
-                      {report.additional_notes && (
-                        <p className="text-xs text-slate-600 mt-1 bg-slate-50 rounded px-2 py-1">{report.additional_notes}</p>
+                      {report.details && (
+                        <p className="text-xs text-slate-600 mt-1 bg-slate-50 rounded px-2 py-1">{report.details}</p>
                       )}
                     </div>
                     <button onClick={() => handleResolveReport(report.id)}

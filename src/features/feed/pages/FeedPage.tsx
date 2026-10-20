@@ -28,7 +28,7 @@ export const FeedPage: React.FC = () => {
   const queryClient = useQueryClient()
   const { profile } = useAuth()
 
-  const currentCategory = (searchParams.get('category') as PostCategory) || 'All'
+  const currentCategory = (searchParams.get('category') as PostCategory | 'All') || 'All'
   const currentSort = (searchParams.get('sort') as 'latest' | 'top' | 'unanswered') || 'latest'
   const currentSearch = searchParams.get('q') || ''
 

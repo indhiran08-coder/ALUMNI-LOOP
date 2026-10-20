@@ -25,11 +25,11 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
   comments,
   onCommentAdded,
 }) => {
-  const { profile } = useAuth()
+  const { profile, isAdmin } = useAuth()
   const [commentBody, setCommentBody] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const isApproved = profile?.account_status === 'approved' || profile?.role === 'admin'
+  const isApproved = profile?.account_status === 'approved' || isAdmin
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
