@@ -37,8 +37,14 @@ export const CommentItem: React.FC<CommentItemProps> = ({
   const [replyBody, setReplyBody] = useState('')
   const [isSubmittingReply, setIsSubmittingReply] = useState(false)
 
-  const isPostAuthor = user?.id === postAuthorId
-  const isCommentAuthor = user?.id === comment.author_id
+  const isPostAuthor = Boolean(
+    (user?.id && user.id === postAuthorId) ||
+    (profile?.id && profile.id === postAuthorId)
+  )
+  const isCommentAuthor = Boolean(
+    (user?.id && user.id === comment.author_id) ||
+    (profile?.id && profile.id === comment.author_id)
+  )
   const canToggleAccepted = (isPostAuthor || isAdmin) && isQuestionPost
   const canDelete = isCommentAuthor || isAdmin
 

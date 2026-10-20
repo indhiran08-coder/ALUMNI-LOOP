@@ -26,7 +26,7 @@ import { socket } from '@/lib/socket'
 export const FeedPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const queryClient = useQueryClient()
-  const { profile } = useAuth()
+  const { profile, isAdmin } = useAuth()
 
   const currentCategory = (searchParams.get('category') as PostCategory | 'All') || 'All'
   const currentSort = (searchParams.get('sort') as 'latest' | 'top' | 'unanswered') || 'latest'
@@ -102,7 +102,7 @@ export const FeedPage: React.FC = () => {
             </p>
           </div>
 
-          {profile?.account_status === 'approved' && (
+          {(profile?.account_status === 'approved' || isAdmin) && (
             <Link
               to="/ask"
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#2957A4] hover:bg-[#1f4482] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs transition-colors shrink-0"
@@ -214,7 +214,7 @@ export const FeedPage: React.FC = () => {
             <p className="text-xs text-slate-500 max-w-sm mx-auto">
               Try choosing another topic, clearing your search query, or start a new discussion to help batchmates.
             </p>
-            {profile?.account_status === 'approved' && (
+            {(profile?.account_status === 'approved' || isAdmin) && (
               <Link
                 to="/ask"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#2957A4] text-white text-xs font-semibold rounded-lg shadow-xs hover:bg-[#1f4482]"

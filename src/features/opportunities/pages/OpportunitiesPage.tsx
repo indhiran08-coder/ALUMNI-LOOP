@@ -179,7 +179,7 @@ export const OpportunitiesPage: React.FC = () => {
               className="w-full pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]"
             />
           </div>
-          <div className="flex items-center gap-1.5 text-xs">
+          <div className="flex items-center gap-1.5 text-xs overflow-x-auto scrollbar-none pb-1 w-full sm:w-auto">
             {(['all', 'internship', 'job', 'referral'] as const).map(type => (
               <button
                 key={type}

@@ -284,7 +284,7 @@ export const PostCard: React.FC<PostCardProps> = ({
             <button
               onClick={handleBookmarkToggle}
               title={isBookmarked ? 'Remove Bookmark' : 'Save Discussion'}
-              className={`p-1.5 rounded-md hover:bg-slate-100 transition-colors ${
+              className={`p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors cursor-pointer ${
                 isBookmarked ? 'text-[#2957A4]' : 'text-slate-400 hover:text-slate-700'
               }`}
             >
@@ -295,7 +295,7 @@ export const PostCard: React.FC<PostCardProps> = ({
             <button
               onClick={handleShare}
               title="Copy share link"
-              className="p-1.5 rounded-md hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors relative"
+              className="p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors relative cursor-pointer"
             >
               <Share2 className="w-4 h-4" />
               {copied && (
@@ -309,7 +309,7 @@ export const PostCard: React.FC<PostCardProps> = ({
             <button
               onClick={() => setReporting(!reporting)}
               title="Report inappropriate content"
-              className="p-1.5 rounded-md hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
+              className="p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
             >
               <Flag className="w-4 h-4" />
             </button>
@@ -319,7 +319,7 @@ export const PostCard: React.FC<PostCardProps> = ({
               <button
                 onClick={handleDelete}
                 title={isAdmin && !isAuthor ? 'Delete Post (Admin Moderation)' : 'Delete your post'}
-                className="p-1.5 rounded-md hover:bg-rose-50 text-slate-400 hover:text-rose-600 transition-colors cursor-pointer"
+                className="p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-rose-50 text-slate-400 hover:text-rose-600 transition-colors cursor-pointer"
               >
                 <Trash2 className="w-4 h-4" />
               </button>

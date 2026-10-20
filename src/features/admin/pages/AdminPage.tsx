@@ -256,7 +256,7 @@ export const AdminPage: React.FC = () => {
                 </div>
                 <div className="divide-y divide-slate-100">
                   {pendingMembers.map(member => (
-                    <div key={member.id} className="px-5 py-4 flex items-center justify-between gap-4">
+                    <div key={member.id} className="px-4 sm:px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div>
                         <Link to={`/profile/${member.id}`} className="text-sm font-bold text-slate-900 hover:text-[#2957A4]">
                           {member.full_name}
@@ -307,7 +307,7 @@ export const AdminPage: React.FC = () => {
               </div>
               <div className="divide-y divide-slate-100 max-h-96 overflow-y-auto">
                 {filteredMembers.map(member => (
-                  <div key={member.id} className="px-5 py-3.5 flex items-center justify-between gap-4">
+                  <div key={member.id} className="px-4 sm:px-5 py-3.5 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-xs font-bold text-[#2957A4]">
                         {member.full_name.charAt(0)}

@@ -23,13 +23,13 @@ export const AppShell: React.FC<AppShellProps> = ({
   currentSearch = '',
 }) => {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col text-slate-800">
+    <div className="min-h-screen bg-slate-50 flex flex-col text-slate-800 antialiased selection:bg-[#2957A4]/15">
       <Header onSearch={onSearch} currentSearch={currentSearch} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex pb-16 md:pb-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full flex-1 flex pb-20 md:pb-8">
         <Sidebar />
 
-        <main className="flex-1 min-w-0 py-6 px-0 md:px-4">
+        <main className="flex-1 min-w-0 py-4 sm:py-6 px-0 md:px-4">
           {children}
         </main>
 
