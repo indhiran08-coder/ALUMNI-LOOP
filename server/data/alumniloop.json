@@ -1,0 +1,64 @@
+{
+  "profiles": [
+    {
+      "id": "usr-admin-01",
+      "full_name": "Campus Administrator",
+      "department": "Training and Placement Cell",
+      "graduation_year": 2020,
+      "member_type": "alumni",
+      "account_status": "approved",
+      "senior_verified": true,
+      "company_name": "Placement Directorate",
+      "job_role": "Placement Administrator",
+      "bio": "Platform administration and college community moderation.",
+      "avatar_path": null,
+      "created_at": "2026-10-14T00:00:00.000Z",
+      "updated_at": "2026-10-14T00:00:00.000Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-1791960331138",
+      "author_id": "usr-1791957455630",
+      "title": "123456",
+      "body": "123451234567",
+      "post_type": "question",
+      "category": "Placement Preparation",
+      "is_pinned": false,
+      "upvotes_count": 1,
+      "downvotes_count": 1,
+      "comments_count": 0,
+      "created_at": "2026-10-14T06:45:31.138Z",
+      "updated_at": "2026-10-14T08:13:56.364Z"
+    }
+  ],
+  "comments": [],
+  "post_votes": [
+    {
+      "id": "pv-1791960347222",
+      "post_id": "post-1791960331138",
+      "user_id": "usr-1791957455630",
+      "value": 1,
+      "created_at": "2026-10-14T06:45:47.222Z",
+      "updated_at": "2026-10-14T08:08:38.504Z"
+    },
+    {
+      "id": "pv-1791965636364",
+      "post_id": "post-1791960331138",
+      "user_id": "usr-admin-01",
+      "value": -1,
+      "created_at": "2026-10-14T08:13:56.364Z",
+      "updated_at": "2026-10-14T08:13:56.364Z"
+    }
+  ],
+  "opportunities": [],
+  "bookmarks": [
+    {
+      "id": "bm-1791965503369",
+      "user_id": "usr-admin-01",
+      "post_id": "post-1791960331138",
+      "created_at": "2026-10-14T08:11:43.369Z"
+    }
+  ],
+  "notifications": []
+}

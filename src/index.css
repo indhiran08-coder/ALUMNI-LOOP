@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-blue: #2957a4;
+    --brand-blue-hover: #1f4482;
+    --brand-blue-light: #eff6ff;
+    --navy-dark: #0d1b2a;
+    --navy-text: #1b263b;
+    --surface-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --border-subtle: #e2e8f0;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--navy-text);
+    background-color: var(--surface-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
