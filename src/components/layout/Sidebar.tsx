@@ -62,7 +62,7 @@ export const Sidebar: React.FC = () => {
                 to={item.to}
                 className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   item.active
-                    ? 'bg-[#2957A4] text-white shadow-xs font-semibold'
+                    ? 'bg-[#33A1C9] text-white shadow-xs font-semibold'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
@@ -86,8 +86,8 @@ export const Sidebar: React.FC = () => {
                 to={`/feed?category=${encodeURIComponent(cat)}`}
                 className={`block px-3 py-1.5 text-xs rounded-md truncate transition-colors ${
                   currentCategory === cat
-                    ? 'text-[#2957A4] font-semibold bg-blue-50'
-                    : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                    ? 'text-[#2681a3] font-semibold bg-[#eaf6fa]'
+                    : 'text-slate-500 hover:text-slate-900 hover:bg-[#faf9f0]'
                 }`}
               >
                 # {cat}

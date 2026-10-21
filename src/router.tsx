@@ -27,7 +27,7 @@ import { AdminPage } from '@/features/admin/pages/AdminPage'
 const FullPageSpinner: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-50">
     <div className="flex flex-col items-center gap-3">
-      <div className="w-10 h-10 border-4 border-[#2957A4]/20 border-t-[#2957A4] rounded-full animate-spin" />
+      <div className="w-10 h-10 border-4 border-[#33A1C9]/20 border-t-[#33A1C9] rounded-full animate-spin" />
       <p className="text-sm font-medium text-slate-500">Loading AlumniLoop…</p>
     </div>
   </div>
@@ -76,7 +76,7 @@ const NotFoundPage: React.FC = () => (
       <p className="text-8xl font-black text-slate-200">404</p>
       <h1 className="text-2xl font-bold text-slate-900">Page Not Found</h1>
       <p className="text-sm text-slate-500">The page you're looking for doesn't exist or has been moved.</p>
-      <a href="/feed" className="inline-flex px-5 py-2.5 bg-[#2957A4] text-white font-semibold text-sm rounded-lg shadow-sm hover:bg-[#1f4482]">
+      <a href="/feed" className="inline-flex px-5 py-2.5 bg-[#33A1C9] text-white font-semibold text-sm rounded-lg shadow-sm hover:bg-[#2681a3]">
         Back to Community Feed
       </a>
     </div>

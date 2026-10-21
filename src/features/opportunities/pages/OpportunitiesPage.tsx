@@ -18,7 +18,7 @@ import { socket } from '@/lib/socket'
 
 const OPPORTUNITY_LABELS: Record<OpportunityType, { label: string; color: string }> = {
   job: { label: 'Full-Time Job', color: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-  internship: { label: 'Internship', color: 'bg-blue-50 text-[#2957A4] border-blue-200' },
+  internship: { label: 'Internship', color: 'bg-[#eaf6fa] text-[#2681a3] border-[#bfe4f1]' },
   referral: { label: 'Referral', color: 'bg-purple-50 text-purple-700 border-purple-200' },
 }
 
@@ -98,7 +98,7 @@ const OpportunityCard: React.FC<{ opp: Opportunity; onClose: () => void }> = ({ 
             href={opp.application_url}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#2957A4] hover:bg-[#1f4482] text-white text-xs font-semibold rounded-lg shadow-sm transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#33A1C9] hover:bg-[#2681a3] text-white text-xs font-semibold rounded-lg shadow-sm transition-colors"
           >
             Apply Now
             <ExternalLink className="w-3.5 h-3.5" />
@@ -141,7 +141,7 @@ export const OpportunitiesPage: React.FC = () => {
         <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-              <Briefcase className="w-5 h-5 text-[#2957A4]" />
+              <Briefcase className="w-5 h-5 text-[#33A1C9]" />
               Opportunities Board
             </h1>
             <p className="text-xs text-slate-500 mt-0.5">
@@ -151,7 +151,7 @@ export const OpportunitiesPage: React.FC = () => {
           {(profile?.senior_verified || isAdmin || profile?.account_status === 'approved') && (
             <button
               onClick={() => navigate('/opportunities/new')}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#2957A4] text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-[#1f4482] transition-colors shrink-0"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#33A1C9] text-white text-xs font-semibold rounded-lg shadow-sm hover:bg-[#2681a3] transition-colors shrink-0"
             >
               <Plus className="w-4 h-4" />
               Post Opportunity
@@ -176,7 +176,7 @@ export const OpportunitiesPage: React.FC = () => {
               placeholder="Search companies, roles, locations..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]"
+              className="w-full pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9]"
             />
           </div>
           <div className="flex items-center gap-1.5 text-xs overflow-x-auto scrollbar-none pb-1 w-full sm:w-auto">
@@ -186,7 +186,7 @@ export const OpportunitiesPage: React.FC = () => {
                 onClick={() => setTypeFilter(type)}
                 className={`px-3 py-1.5 rounded-full font-semibold border transition-colors capitalize ${
                   typeFilter === type
-                    ? 'bg-[#2957A4] text-white border-[#2957A4]'
+                    ? 'bg-[#33A1C9] text-white border-[#33A1C9]'
                     : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                 }`}
               >

@@ -58,13 +58,13 @@ export const Header: React.FC<HeaderProps> = ({ onSearch, currentSearch = '' }) 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-2 sm:gap-4">
         {/* Brand / Logo */}
         <Link to="/feed" className="flex items-center gap-2 sm:gap-2.5 shrink-0 group">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#2957A4] flex items-center justify-center text-white shadow-xs group-hover:bg-[#1f4482] transition-colors shrink-0">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#33A1C9] flex items-center justify-center text-white shadow-xs group-hover:bg-[#2681a3] transition-colors shrink-0">
             <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 flex items-center gap-1 sm:gap-1.5 leading-tight">
               AlumniLoop
-              <span className="text-[9px] sm:text-[10px] uppercase font-semibold px-1 sm:px-1.5 py-0.5 rounded-sm bg-blue-50 text-[#2957A4] border border-blue-200">
+              <span className="text-[9px] sm:text-[10px] uppercase font-semibold px-1 sm:px-1.5 py-0.5 rounded-sm bg-[#eaf6fa] text-[#2681a3] border border-[#bfe4f1]">
                 AI &amp; DS
               </span>
             </span>
@@ -86,7 +86,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearch, currentSearch = '' }) 
                 setSearchInput(e.target.value)
                 if (onSearch) onSearch(e.target.value)
               }}
-              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4] transition-all"
+              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9] transition-all"
             />
           </div>
         </form>
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearch, currentSearch = '' }) 
           {canPost && (
             <Link
               to="/ask"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 bg-[#2957A4] hover:bg-[#1f4482] text-white text-xs sm:text-sm font-medium rounded-lg shadow-xs transition-colors shrink-0"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 bg-[#33A1C9] hover:bg-[#2681a3] text-white text-xs sm:text-sm font-medium rounded-lg shadow-xs transition-colors shrink-0"
             >
               <PlusCircle className="w-4 h-4" />
               <span className="hidden sm:inline">Start Discussion</span>
@@ -136,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearch, currentSearch = '' }) 
               className="flex items-center gap-1.5 sm:gap-2 p-1 sm:p-1.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label="User profile menu"
             >
-              <div className="w-8 h-8 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center font-bold text-xs text-[#2957A4]">
+              <div className="w-8 h-8 rounded-full bg-[#eaf6fa] border border-[#bfe4f1] flex items-center justify-center font-bold text-xs text-[#2681a3]">
                 {profile?.full_name ? profile.full_name.charAt(0).toUpperCase() : 'U'}
               </div>
               <ChevronDown className="w-3.5 h-3.5 text-slate-500 hidden sm:block" />
@@ -177,9 +177,9 @@ export const Header: React.FC<HeaderProps> = ({ onSearch, currentSearch = '' }) 
                   {isAdmin && (
                     <Link
                       to="/admin"
-                      className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-[#2957A4] hover:bg-blue-50"
+                      className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-[#2681a3] hover:bg-[#eaf6fa]"
                     >
-                      <Briefcase className="w-4 h-4 text-[#2957A4]" />
+                      <Briefcase className="w-4 h-4 text-[#33A1C9]" />
                       Admin Dashboard
                     </Link>
                   )}
@@ -215,7 +215,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearch, currentSearch = '' }) 
                   setSearchInput(e.target.value)
                   if (onSearch) onSearch(e.target.value)
                 }}
-                className="w-full pl-9 pr-8 py-2 bg-white border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]"
+                className="w-full pl-9 pr-8 py-2 bg-white border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9]"
               />
               {searchInput && (
                 <button

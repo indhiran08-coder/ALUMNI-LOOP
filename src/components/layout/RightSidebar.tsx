@@ -32,12 +32,12 @@ export const RightSidebar: React.FC = () => {
               to={`/profile/${senior.id}`}
               className="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors group"
             >
-              <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-200 text-[#2957A4] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-9 h-9 rounded-full bg-[#eaf6fa] border border-[#bfe4f1] text-[#2681a3] flex items-center justify-center font-bold text-xs shrink-0">
                 {senior.full_name.charAt(0)}
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1">
-                  <p className="text-xs font-semibold text-slate-900 group-hover:text-[#2957A4] truncate">
+                  <p className="text-xs font-semibold text-slate-900 group-hover:text-[#33A1C9] truncate">
                     {senior.full_name}
                   </p>
                   <ShieldCheck className="w-3 h-3 text-emerald-600 shrink-0" />
@@ -56,8 +56,8 @@ export const RightSidebar: React.FC = () => {
       </div>
 
       {/* Department Guidelines */}
-      <div className="bg-blue-50/70 border border-blue-100 rounded-xl p-4">
-        <h4 className="text-xs font-bold text-[#2957A4] uppercase tracking-wider mb-2">
+      <div className="bg-[#eaf6fa]/80 border border-[#bfe4f1] rounded-xl p-4">
+        <h4 className="text-xs font-bold text-[#2681a3] uppercase tracking-wider mb-2">
           Community Guidelines
         </h4>
         <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">

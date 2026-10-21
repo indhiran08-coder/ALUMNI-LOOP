@@ -63,7 +63,7 @@ export const PostDetailPage: React.FC = () => {
           <p className="text-xs text-slate-500">This post may have been removed or does not exist.</p>
           <Link
             to="/feed"
-            className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#2957A4] text-white text-xs font-semibold rounded-lg"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#33A1C9] text-white text-xs font-semibold rounded-lg"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Feed
@@ -107,7 +107,7 @@ export const PostDetailPage: React.FC = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#2957A4] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#33A1C9] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to discussions
@@ -122,14 +122,14 @@ export const PostDetailPage: React.FC = () => {
           {/* Top metadata */}
           <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-200 text-[#2957A4] flex items-center justify-center font-bold text-sm shrink-0">
+              <div className="w-10 h-10 rounded-full bg-[#eaf6fa] border border-[#bfe4f1] text-[#2681a3] flex items-center justify-center font-bold text-sm shrink-0">
                 {post.author ? post.author.full_name.charAt(0) : 'U'}
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
                   <Link
                     to={post.author ? `/profile/${post.author.id}` : '#'}
-                    className="font-bold text-slate-900 hover:text-[#2957A4] text-sm"
+                    className="font-bold text-slate-900 hover:text-[#33A1C9] text-sm"
                   >
                     {post.author?.full_name || 'Anonymous Member'}
                   </Link>
@@ -158,7 +158,7 @@ export const PostDetailPage: React.FC = () => {
               </div>
             </div>
 
-            <span className="text-xs font-bold uppercase px-2.5 py-1 rounded-full bg-blue-50 text-[#2957A4] border border-blue-200">
+            <span className="text-xs font-bold uppercase px-2.5 py-1 rounded-full bg-[#eaf6fa] text-[#2681a3] border border-[#bfe4f1]">
               {post.post_type}
             </span>
           </div>

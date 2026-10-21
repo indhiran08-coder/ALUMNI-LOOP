@@ -97,7 +97,7 @@ export const AdminPage: React.FC = () => {
           <Shield className="w-12 h-12 text-rose-300 mx-auto" />
           <h2 className="text-lg font-bold text-slate-800">Admin Access Only</h2>
           <p className="text-xs text-slate-500">You do not have administrator privileges.</p>
-          <button onClick={() => navigate('/feed')} className="px-4 py-2 bg-[#2957A4] text-white text-xs font-semibold rounded-lg">
+          <button onClick={() => navigate('/feed')} className="px-4 py-2 bg-[#33A1C9] text-white text-xs font-semibold rounded-lg">
             Back to Feed
           </button>
         </div>
@@ -164,12 +164,12 @@ export const AdminPage: React.FC = () => {
     <AppShell showRightSidebar={false}>
       <div className="max-w-5xl mx-auto space-y-5">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#2957A4] to-blue-600 rounded-xl p-5 text-white shadow-sm">
+        <div className="bg-gradient-to-r from-[#33A1C9] to-[#206882] rounded-xl p-5 text-white shadow-sm">
           <h1 className="text-xl font-bold flex items-center gap-2">
             <Shield className="w-6 h-6" />
             Administration Dashboard
           </h1>
-          <p className="text-xs text-blue-200 mt-1">Manage community members, verifications, reports, and audit trails</p>
+          <p className="text-xs text-[#d6f0f8] mt-1">Manage community members, verifications, reports, and audit trails</p>
         </div>
 
         {/* Tabs */}
@@ -180,7 +180,7 @@ export const AdminPage: React.FC = () => {
               onClick={() => handleTabChange(tab.key)}
               className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
                 activeTab === tab.key
-                  ? 'bg-[#2957A4] text-white'
+                  ? 'bg-[#33A1C9] text-white'
                   : 'text-slate-600 hover:bg-slate-100'
               }`}
             >
@@ -199,7 +199,7 @@ export const AdminPage: React.FC = () => {
         {activeTab === 'overview' && (
           <div className="space-y-5">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <StatCard label="Total Members" value={allMembers.length} icon={<Users className="w-5 h-5 text-blue-700" />} color="bg-blue-50" />
+              <StatCard label="Total Members" value={allMembers.length} icon={<Users className="w-5 h-5 text-[#2681a3]" />} color="bg-[#eaf6fa]" />
               <StatCard label="Pending Approval" value={pendingMembers.length} icon={<Clock className="w-5 h-5 text-amber-600" />} color="bg-amber-50" />
               <StatCard label="Senior Requests" value={seniorRequests.length} icon={<ShieldCheck className="w-5 h-5 text-emerald-600" />} color="bg-emerald-50" />
               <StatCard label="Pending Reports" value={reports.length} icon={<Flag className="w-5 h-5 text-rose-600" />} color="bg-rose-50" />
@@ -212,7 +212,7 @@ export const AdminPage: React.FC = () => {
                   {pendingMembers.length} member{pendingMembers.length > 1 ? 's' : ''} awaiting approval
                 </p>
                 <button onClick={() => setActiveTab('members')}
-                  className="text-xs font-semibold text-[#2957A4] hover:underline">
+                  className="text-xs font-semibold text-[#33A1C9] hover:underline">
                   Review Pending Members →
                 </button>
               </div>
@@ -258,7 +258,7 @@ export const AdminPage: React.FC = () => {
                   {pendingMembers.map(member => (
                     <div key={member.id} className="px-4 sm:px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div>
-                        <Link to={`/profile/${member.id}`} className="text-sm font-bold text-slate-900 hover:text-[#2957A4]">
+                        <Link to={`/profile/${member.id}`} className="text-sm font-bold text-slate-900 hover:text-[#33A1C9]">
                           {member.full_name}
                         </Link>
                         <p className="text-xs text-slate-500">{member.department} · Class of {member.graduation_year}</p>
@@ -302,18 +302,18 @@ export const AdminPage: React.FC = () => {
                   <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
                   <input value={memberSearch} onChange={e => setMemberSearch(e.target.value)}
                     placeholder="Search by name or department..."
-                    className="w-full pl-7 pr-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#2957A4]/20" />
+                    className="w-full pl-7 pr-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#33A1C9]/20" />
                 </div>
               </div>
               <div className="divide-y divide-slate-100 max-h-96 overflow-y-auto">
                 {filteredMembers.map(member => (
                   <div key={member.id} className="px-4 sm:px-5 py-3.5 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-xs font-bold text-[#2957A4]">
+                      <div className="w-8 h-8 rounded-lg bg-[#eaf6fa] border border-[#bfe4f1] flex items-center justify-center text-xs font-bold text-[#2681a3]">
                         {member.full_name.charAt(0)}
                       </div>
                       <div>
-                        <Link to={`/profile/${member.id}`} className="text-xs font-bold text-slate-900 hover:text-[#2957A4]">
+                        <Link to={`/profile/${member.id}`} className="text-xs font-bold text-slate-900 hover:text-[#33A1C9]">
                           {member.full_name}
                         </Link>
                         <p className="text-[11px] text-slate-500">{member.department}</p>

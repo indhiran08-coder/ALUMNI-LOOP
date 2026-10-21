@@ -12,7 +12,7 @@ export const PendingApprovalPage: React.FC = () => {
   const { profile, logout } = useAuth()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50/20 to-slate-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#FFFFF0] via-amber-50/30 to-[#FFFFF0] flex items-center justify-center p-4">
       <div className="w-full max-w-md text-center space-y-6">
         <div className="w-20 h-20 mx-auto bg-amber-100 rounded-full flex items-center justify-center border-4 border-amber-200">
           <Clock className="w-10 h-10 text-amber-600" />
@@ -42,7 +42,7 @@ export const PendingApprovalPage: React.FC = () => {
           </ol>
         </div>
 
-        <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-700">
+        <div className="p-4 bg-[#eaf6fa] border border-[#bfe4f1] rounded-xl text-xs text-[#2681a3]">
           <div className="flex items-center gap-2 mb-1">
             <GraduationCap className="w-4 h-4" />
             <strong>Review typically completes within 24–48 hours.</strong>
@@ -110,10 +110,10 @@ export const ForgotPasswordPage: React.FC = () => {
   const [email, setEmail] = React.useState('')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/30 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#FFFFF0] via-[#eaf6fa]/30 to-[#FFFFF0] flex items-center justify-center p-4">
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center">
-          <div className="w-14 h-14 mx-auto mb-3 rounded-2xl bg-[#2957A4] flex items-center justify-center shadow-lg">
+          <div className="w-14 h-14 mx-auto mb-3 rounded-2xl bg-[#33A1C9] flex items-center justify-center shadow-lg">
             <GraduationCap className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-xl font-bold text-slate-900">Reset Your Password</h1>
@@ -127,9 +127,9 @@ export const ForgotPasswordPage: React.FC = () => {
               </p>
               <input type="email" placeholder="yourname@college.edu" value={email}
                 onChange={e => setEmail(e.target.value)} required
-                className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]" />
+                className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9]" />
               <button type="submit"
-                className="w-full py-2.5 bg-[#2957A4] hover:bg-[#1f4482] text-white font-semibold text-sm rounded-lg transition-colors">
+                className="w-full py-2.5 bg-[#33A1C9] hover:bg-[#2681a3] text-white font-semibold text-sm rounded-lg transition-colors">
                 Send Reset Instructions
               </button>
             </form>
@@ -149,7 +149,7 @@ export const ForgotPasswordPage: React.FC = () => {
           )}
 
           <div className="text-center">
-            <Link to="/login" className="text-xs text-[#2957A4] font-semibold hover:underline">← Back to Sign In</Link>
+            <Link to="/login" className="text-xs text-[#33A1C9] font-semibold hover:underline">← Back to Sign In</Link>
           </div>
         </div>
       </div>

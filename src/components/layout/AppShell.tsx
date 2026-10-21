@@ -23,7 +23,7 @@ export const AppShell: React.FC<AppShellProps> = ({
   currentSearch = '',
 }) => {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col text-slate-800 antialiased selection:bg-[#2957A4]/15">
+    <div className="min-h-screen bg-[#FFFFF0] flex flex-col text-[#162832] antialiased selection:bg-[#33A1C9]/20">
       <Header onSearch={onSearch} currentSearch={currentSearch} />
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full flex-1 flex pb-20 md:pb-8">

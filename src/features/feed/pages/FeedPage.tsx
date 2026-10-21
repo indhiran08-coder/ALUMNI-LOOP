@@ -94,7 +94,7 @@ export const FeedPage: React.FC = () => {
         <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-2xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-              <Compass className="w-6 h-6 text-[#2957A4]" />
+              <Compass className="w-6 h-6 text-[#33A1C9]" />
               {currentCategory === 'All' ? 'AI & DS Community Feed' : currentCategory}
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
@@ -105,7 +105,7 @@ export const FeedPage: React.FC = () => {
           {(profile?.account_status === 'approved' || isAdmin) && (
             <Link
               to="/ask"
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#2957A4] hover:bg-[#1f4482] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs transition-colors shrink-0"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#33A1C9] hover:bg-[#2681a3] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs transition-colors shrink-0"
             >
               <PlusCircle className="w-4 h-4" />
               <span>Ask or Share</span>
@@ -121,7 +121,7 @@ export const FeedPage: React.FC = () => {
               onClick={() => setSortFilter('latest')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors ${
                 currentSort === 'latest'
-                  ? 'bg-blue-50 text-[#2957A4]'
+                  ? 'bg-[#eaf6fa] text-[#2681a3]'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
@@ -175,7 +175,7 @@ export const FeedPage: React.FC = () => {
             onClick={() => setCategoryFilter('All')}
             className={`px-3 py-1.5 rounded-full shrink-0 font-medium transition-colors ${
               currentCategory === 'All'
-                ? 'bg-[#2957A4] text-white shadow-xs'
+                ? 'bg-[#33A1C9] text-white shadow-xs'
                 : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
             }`}
           >
@@ -187,7 +187,7 @@ export const FeedPage: React.FC = () => {
               onClick={() => setCategoryFilter(cat)}
               className={`px-3 py-1.5 rounded-full shrink-0 font-medium transition-colors ${
                 currentCategory === cat
-                  ? 'bg-[#2957A4] text-white shadow-xs'
+                  ? 'bg-[#33A1C9] text-white shadow-xs'
                   : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
               }`}
             >
@@ -217,7 +217,7 @@ export const FeedPage: React.FC = () => {
             {(profile?.account_status === 'approved' || isAdmin) && (
               <Link
                 to="/ask"
-                className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#2957A4] text-white text-xs font-semibold rounded-lg shadow-xs hover:bg-[#1f4482]"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#33A1C9] text-white text-xs font-semibold rounded-lg shadow-xs hover:bg-[#2681a3]"
               >
                 <PlusCircle className="w-4 h-4" />
                 Start Discussion

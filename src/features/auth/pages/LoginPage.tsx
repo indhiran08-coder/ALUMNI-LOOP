@@ -41,11 +41,11 @@ export const LoginPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-100 flex items-center justify-center p-4 sm:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#FFFFF0] via-[#eaf6fa]/30 to-[#FFFFF0] flex items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-md space-y-6">
         {/* Header Branding */}
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 bg-[#2957A4] rounded-2xl mx-auto flex items-center justify-center text-white shadow-md shadow-[#2957A4]/20">
+          <div className="w-12 h-12 bg-[#33A1C9] rounded-2xl mx-auto flex items-center justify-center text-white shadow-md shadow-[#33A1C9]/20">
             <GraduationCap className="w-7 h-7" />
           </div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">AlumniLoop</h1>
@@ -83,7 +83,7 @@ export const LoginPage: React.FC = () => {
                   placeholder="student@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4] transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9] transition-all"
                 />
               </div>
             </div>
@@ -100,7 +100,7 @@ export const LoginPage: React.FC = () => {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4] transition-all"
+                  className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9] transition-all"
                 />
                 <button
                   type="button"
@@ -116,7 +116,7 @@ export const LoginPage: React.FC = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-2.5 bg-[#2957A4] hover:bg-[#1f4482] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-xs flex items-center justify-center gap-2 transition-colors disabled:opacity-60 cursor-pointer active:scale-[0.99]"
+              className="w-full py-2.5 bg-[#33A1C9] hover:bg-[#2681a3] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-xs flex items-center justify-center gap-2 transition-colors disabled:opacity-60 cursor-pointer active:scale-[0.99]"
             >
               {isLoading ? (
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -129,7 +129,7 @@ export const LoginPage: React.FC = () => {
 
           <div className="pt-2 text-center text-xs text-slate-500 border-t border-slate-100">
             Don't have an account?{' '}
-            <Link to="/register" className="text-[#2957A4] font-semibold hover:underline">
+            <Link to="/register" className="text-[#33A1C9] font-semibold hover:underline">
               Register as Student or Alumni
             </Link>
           </div>

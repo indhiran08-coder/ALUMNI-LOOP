@@ -21,7 +21,7 @@ export const MobileNav: React.FC = () => {
       <Link
         to="/feed"
         className={`flex flex-col items-center justify-center py-1 px-2.5 min-w-[54px] min-h-[44px] text-[10px] transition-colors rounded-lg ${
-          path === '/feed' ? 'text-[#2957A4] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
+          path === '/feed' ? 'text-[#33A1C9] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
         }`}
       >
         <Compass className={`w-5 h-5 mb-0.5 ${path === '/feed' ? 'stroke-[2.5]' : 'stroke-2'}`} />
@@ -32,7 +32,7 @@ export const MobileNav: React.FC = () => {
       <Link
         to="/opportunities"
         className={`flex flex-col items-center justify-center py-1 px-2.5 min-w-[54px] min-h-[44px] text-[10px] transition-colors rounded-lg ${
-          path.startsWith('/opportunities') ? 'text-[#2957A4] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
+          path.startsWith('/opportunities') ? 'text-[#33A1C9] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
         }`}
       >
         <Briefcase className={`w-5 h-5 mb-0.5 ${path.startsWith('/opportunities') ? 'stroke-[2.5]' : 'stroke-2'}`} />
@@ -46,10 +46,10 @@ export const MobileNav: React.FC = () => {
           aria-label="Create Post"
           className="flex flex-col items-center justify-center -mt-4 group shrink-0"
         >
-          <div className="w-11 h-11 rounded-full bg-[#2957A4] text-white flex items-center justify-center shadow-md shadow-[#2957A4]/30 active:scale-95 transition-transform group-hover:bg-[#1f4482]">
+          <div className="w-11 h-11 rounded-full bg-[#33A1C9] text-white flex items-center justify-center shadow-md shadow-[#33A1C9]/30 active:scale-95 transition-transform group-hover:bg-[#2681a3]">
             <Plus className="w-6 h-6 stroke-[2.5]" />
           </div>
-          <span className="text-[10px] font-semibold text-[#2957A4] mt-0.5">Post</span>
+          <span className="text-[10px] font-semibold text-[#33A1C9] mt-0.5">Post</span>
         </Link>
       )}
 
@@ -58,7 +58,7 @@ export const MobileNav: React.FC = () => {
         <Link
           to="/admin"
           className={`flex flex-col items-center justify-center py-1 px-2.5 min-w-[54px] min-h-[44px] text-[10px] transition-colors rounded-lg ${
-            path.startsWith('/admin') ? 'text-[#2957A4] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
+            path.startsWith('/admin') ? 'text-[#33A1C9] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
           }`}
         >
           <Shield className={`w-5 h-5 mb-0.5 ${path.startsWith('/admin') ? 'stroke-[2.5]' : 'stroke-2'}`} />
@@ -68,7 +68,7 @@ export const MobileNav: React.FC = () => {
         <Link
           to="/bookmarks"
           className={`flex flex-col items-center justify-center py-1 px-2.5 min-w-[54px] min-h-[44px] text-[10px] transition-colors rounded-lg ${
-            path === '/bookmarks' ? 'text-[#2957A4] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
+            path === '/bookmarks' ? 'text-[#33A1C9] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
           }`}
         >
           <Bookmark className={`w-5 h-5 mb-0.5 ${path === '/bookmarks' ? 'stroke-[2.5]' : 'stroke-2'}`} />
@@ -80,7 +80,7 @@ export const MobileNav: React.FC = () => {
       <Link
         to={profile ? `/profile/${profile.id}` : '/login'}
         className={`flex flex-col items-center justify-center py-1 px-2.5 min-w-[54px] min-h-[44px] text-[10px] transition-colors rounded-lg ${
-          path.startsWith('/profile') ? 'text-[#2957A4] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
+          path.startsWith('/profile') ? 'text-[#33A1C9] font-bold' : 'text-slate-500 hover:text-slate-900 font-medium'
         }`}
       >
         <User className={`w-5 h-5 mb-0.5 ${path.startsWith('/profile') ? 'stroke-[2.5]' : 'stroke-2'}`} />

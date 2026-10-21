@@ -100,7 +100,7 @@ export const AskPostPage: React.FC = () => {
           </p>
           <button
             onClick={() => navigate('/feed')}
-            className="px-4 py-2 bg-[#2957A4] text-white text-xs font-semibold rounded-lg"
+            className="px-4 py-2 bg-[#33A1C9] text-white text-xs font-semibold rounded-lg"
           >
             Back to Feed
           </button>
@@ -172,7 +172,7 @@ export const AskPostPage: React.FC = () => {
         {/* Back link */}
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#2957A4]"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#33A1C9]"
         >
           <ArrowLeft className="w-4 h-4" />
           Cancel & Return
@@ -182,7 +182,7 @@ export const AskPostPage: React.FC = () => {
         <div className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 shadow-xs">
           <div className="mb-6">
             <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-              <PlusCircle className="w-6 h-6 text-[#2957A4]" />
+              <PlusCircle className="w-6 h-6 text-[#33A1C9]" />
               Start a New Community Discussion
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -214,12 +214,12 @@ export const AskPostPage: React.FC = () => {
                       onClick={() => setPostType(opt.type)}
                       className={`p-3 rounded-xl border text-left transition-all ${
                         isSelected
-                          ? 'border-[#2957A4] bg-blue-50/60 ring-2 ring-[#2957A4]/20'
+                          ? 'border-[#33A1C9] bg-[#eaf6fa]/70 ring-2 ring-[#33A1C9]/25'
                           : 'border-slate-200 hover:border-slate-300 bg-white'
                       }`}
                     >
                       <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-slate-900">
-                        <Icon className={`w-4 h-4 ${isSelected ? 'text-[#2957A4]' : 'text-slate-400'}`} />
+                        <Icon className={`w-4 h-4 ${isSelected ? 'text-[#33A1C9]' : 'text-slate-400'}`} />
                         <span>{opt.label}</span>
                       </div>
                       <p className="text-[11px] text-slate-500 mt-1 leading-snug">{opt.desc}</p>
@@ -238,7 +238,7 @@ export const AskPostPage: React.FC = () => {
                 id="post-category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value as PostCategory)}
-                className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]"
+                className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9]"
               >
                 {POST_CATEGORIES.map((cat) => (
                   <option key={cat} value={cat}>
@@ -263,7 +263,7 @@ export const AskPostPage: React.FC = () => {
                 placeholder="e.g. Amazon SDE-1 On-Campus Rounds Breakdown & Tips (2025 Batch)"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full text-sm p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]"
+                className="w-full text-sm p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9]"
                 required
               />
               {title.trim().length < 3 && title.length > 0 && (
@@ -291,7 +291,7 @@ export const AskPostPage: React.FC = () => {
                 }
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
-                className="w-full text-sm p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4] font-mono text-xs sm:text-sm"
+                className="w-full text-sm p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9] font-mono text-xs sm:text-sm"
                 required
               />
               {/* Helper: show min requirement */}
@@ -309,8 +309,8 @@ export const AskPostPage: React.FC = () => {
               </label>
 
               {!photoUrl ? (
-                <label className="flex items-center gap-2 p-3 border border-dashed border-slate-300 rounded-lg hover:border-[#2957A4] hover:bg-blue-50/30 transition-colors cursor-pointer text-xs font-semibold text-slate-600">
-                  <ImageIcon className="w-4 h-4 text-[#2957A4]" />
+                <label className="flex items-center gap-2 p-3 border border-dashed border-slate-300 rounded-lg hover:border-[#33A1C9] hover:bg-[#eaf6fa]/40 transition-colors cursor-pointer text-xs font-semibold text-slate-600">
+                  <ImageIcon className="w-4 h-4 text-[#33A1C9]" />
                   <span>Choose Image from your device (PNG, JPG, WEBP, max 8MB)</span>
                   <input
                     type="file"
@@ -367,7 +367,7 @@ export const AskPostPage: React.FC = () => {
                       ? 'Please enter at least 3 characters for both title and content to publish'
                       : 'Publish discussion'
                   }
-                  className="px-5 py-2.5 bg-[#2957A4] hover:bg-[#1f4482] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs flex items-center gap-1.5 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="px-5 py-2.5 bg-[#33A1C9] hover:bg-[#2681a3] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs flex items-center gap-1.5 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
                   <span>{isSubmitting ? 'Publishing...' : 'Publish Discussion'}</span>

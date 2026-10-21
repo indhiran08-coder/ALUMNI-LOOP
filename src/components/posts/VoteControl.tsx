@@ -80,7 +80,7 @@ export const VoteControl: React.FC<VoteControlProps> = ({
           userVote === 1
             ? 'text-orange-600'
             : userVote === -1
-            ? 'text-blue-600'
+            ? 'text-[#2681a3]'
             : 'text-slate-700'
         }`}
       >
@@ -94,11 +94,11 @@ export const VoteControl: React.FC<VoteControlProps> = ({
         aria-label="Downvote"
         className={`p-1 rounded-md transition-colors ${
           userVote === -1
-            ? 'text-blue-600 bg-blue-100/70 hover:bg-blue-200/60'
-            : 'text-slate-400 hover:text-blue-600 hover:bg-slate-100'
+            ? 'text-[#2681a3] bg-[#eaf6fa] hover:bg-[#d6f0f8]'
+            : 'text-slate-400 hover:text-[#2681a3] hover:bg-slate-100'
         }`}
       >
-        <ArrowBigDown className={`w-5 h-5 ${userVote === -1 ? 'fill-blue-600' : ''}`} />
+        <ArrowBigDown className={`w-5 h-5 ${userVote === -1 ? 'fill-[#2681a3]' : ''}`} />
       </button>
     </div>
   )

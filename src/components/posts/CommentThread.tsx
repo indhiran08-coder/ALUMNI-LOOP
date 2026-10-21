@@ -60,7 +60,7 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
         >
           <div className="flex items-center justify-between">
             <label htmlFor="root-comment" className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
-              <MessageSquare className="w-4 h-4 text-[#2957A4]" />
+              <MessageSquare className="w-4 h-4 text-[#33A1C9]" />
               <span>{isQuestionPost ? 'Share an Answer or Experience' : 'Join Discussion'}</span>
             </label>
             {profile?.senior_verified && (
@@ -81,7 +81,7 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
             }
             value={commentBody}
             onChange={(e) => setCommentBody(e.target.value)}
-            className="w-full text-sm p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4] transition-all"
+            className="w-full text-sm p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9] transition-all"
             required
           />
 
@@ -92,7 +92,7 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
             <button
               type="submit"
               disabled={isSubmitting || !commentBody.trim()}
-              className="px-4 py-2 bg-[#2957A4] hover:bg-[#1f4482] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs flex items-center gap-1.5 transition-colors disabled:opacity-50"
+              className="px-4 py-2 bg-[#33A1C9] hover:bg-[#2681a3] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-xs flex items-center gap-1.5 transition-colors disabled:opacity-50"
             >
               <Send className="w-3.5 h-3.5" />
               <span>{isQuestionPost ? 'Post Answer' : 'Submit Comment'}</span>

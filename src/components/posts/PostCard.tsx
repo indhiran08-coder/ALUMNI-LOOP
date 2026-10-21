@@ -130,7 +130,7 @@ export const PostCard: React.FC<PostCardProps> = ({
       case 'question':
         return 'bg-amber-50 text-amber-700 border-amber-200'
       case 'advice':
-        return 'bg-blue-50 text-[#2957A4] border-blue-200'
+        return 'bg-[#eaf6fa] text-[#2681a3] border-[#bfe4f1]'
       case 'resource':
         return 'bg-purple-50 text-purple-700 border-purple-200'
       default:
@@ -173,7 +173,7 @@ export const PostCard: React.FC<PostCardProps> = ({
               {/* Category Pill */}
               <Link
                 to={`/feed?category=${encodeURIComponent(post.category)}`}
-                className="text-xs font-medium text-slate-500 hover:text-[#2957A4] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded-md transition-colors"
+                className="text-xs font-medium text-slate-500 hover:text-[#33A1C9] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded-md transition-colors"
               >
                 {post.category}
               </Link>
@@ -191,7 +191,7 @@ export const PostCard: React.FC<PostCardProps> = ({
           </div>
 
           {/* Post Title */}
-          <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug mb-2 hover:text-[#2957A4] transition-colors">
+          <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug mb-2 hover:text-[#33A1C9] transition-colors">
             <Link to={`/post/${post.id}`}>{post.title}</Link>
           </h2>
 
@@ -199,7 +199,7 @@ export const PostCard: React.FC<PostCardProps> = ({
           <div className="flex items-center gap-2 mb-3 text-xs text-slate-600">
             <Link
               to={post.author ? `/profile/${post.author.id}` : '#'}
-              className="font-semibold text-slate-800 hover:text-[#2957A4] flex items-center gap-1"
+              className="font-semibold text-slate-800 hover:text-[#33A1C9] flex items-center gap-1"
             >
               <span>{post.author?.full_name || 'Anonymous Member'}</span>
               {post.author?.senior_verified && (
@@ -232,7 +232,7 @@ export const PostCard: React.FC<PostCardProps> = ({
                 {post.body.length > 280 && (
                   <Link
                     to={`/post/${post.id}`}
-                    className="ml-1 text-xs font-semibold text-[#2957A4] hover:underline"
+                    className="ml-1 text-xs font-semibold text-[#33A1C9] hover:underline"
                   >
                     Read full post
                   </Link>
@@ -285,10 +285,10 @@ export const PostCard: React.FC<PostCardProps> = ({
               onClick={handleBookmarkToggle}
               title={isBookmarked ? 'Remove Bookmark' : 'Save Discussion'}
               className={`p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors cursor-pointer ${
-                isBookmarked ? 'text-[#2957A4]' : 'text-slate-400 hover:text-slate-700'
+                isBookmarked ? 'text-[#33A1C9]' : 'text-slate-400 hover:text-slate-700'
               }`}
             >
-              <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-[#2957A4]' : ''}`} />
+              <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-[#33A1C9]' : ''}`} />
             </button>
 
             {/* Share button */}

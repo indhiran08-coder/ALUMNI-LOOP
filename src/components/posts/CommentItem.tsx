@@ -114,7 +114,7 @@ export const CommentItem: React.FC<CommentItemProps> = ({
         <div className="flex items-center gap-2">
           <Link
             to={comment.author ? `/profile/${comment.author.id}` : '#'}
-            className="font-bold text-slate-800 hover:text-[#2957A4] flex items-center gap-1"
+            className="font-bold text-slate-800 hover:text-[#33A1C9] flex items-center gap-1"
           >
             <span>{comment.author?.full_name || 'Member'}</span>
             {comment.author?.senior_verified && (
@@ -163,7 +163,7 @@ export const CommentItem: React.FC<CommentItemProps> = ({
           <button
             type="button"
             onClick={() => setIsReplying(!isReplying)}
-            className="flex items-center gap-1 text-slate-600 hover:text-[#2957A4] font-medium"
+            className="flex items-center gap-1 text-slate-600 hover:text-[#33A1C9] font-medium"
           >
             <Reply className="w-3.5 h-3.5" />
             <span>Reply</span>
@@ -190,7 +190,7 @@ export const CommentItem: React.FC<CommentItemProps> = ({
             placeholder={`Reply to ${comment.author?.full_name || 'this answer'}...`}
             value={replyBody}
             onChange={(e) => setReplyBody(e.target.value)}
-            className="w-full text-xs sm:text-sm p-2.5 bg-white border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-[#2957A4]/20 focus:border-[#2957A4]"
+            className="w-full text-xs sm:text-sm p-2.5 bg-white border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-[#33A1C9]/20 focus:border-[#33A1C9]"
             required
           />
           <div className="flex justify-end gap-2">
@@ -204,7 +204,7 @@ export const CommentItem: React.FC<CommentItemProps> = ({
             <button
               type="submit"
               disabled={isSubmittingReply || !replyBody.trim()}
-              className="text-xs px-3 py-1 bg-[#2957A4] hover:bg-[#1f4482] text-white font-medium rounded-md shadow-2xs flex items-center gap-1 disabled:opacity-50"
+              className="text-xs px-3 py-1 bg-[#33A1C9] hover:bg-[#2681a3] text-white font-medium rounded-md shadow-2xs flex items-center gap-1 disabled:opacity-50"
             >
               <Send className="w-3 h-3" />
               <span>Submit Reply</span>

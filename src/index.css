@@ -2,19 +2,20 @@
 
 @layer base {
   :root {
-    --brand-blue: #2957a4;
-    --brand-blue-hover: #1f4482;
-    --brand-blue-light: #eff6ff;
-    --navy-dark: #0d1b2a;
-    --navy-text: #1b263b;
-    --surface-bg: #f8fafc;
+    --brand-blue: #33A1C9;
+    --brand-blue-hover: #2681a3;
+    --brand-blue-light: #eaf6fa;
+    --navy-dark: #102430;
+    --navy-text: #162832;
+    --surface-bg: #FFFFF0;
     --card-bg: #ffffff;
-    --border-subtle: #e2e8f0;
+    --border-subtle: #e6e4d8;
   }
 
   html {
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
+    background-color: #FFFFF0;
   }
 
   body {
